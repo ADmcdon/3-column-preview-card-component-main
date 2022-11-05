@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --Bright_orange: rgb(227, 136, 38);
+  --Dark_cyan: rgb(0, 105, 112);
+  --Very_drk_cyan: rgb(0, 66, 65);
+  --Transparent_white: rgba(255, 255, 255, 0.75); /* (paragraphs) */
+  --Very_lt_gray : hsl(0, 0%, 95%) /* (background, headings, buttons) */
+}
+
+main{
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--Very_lt_gray);
+  font-size: 15px;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+  color: var(--Transparent_white); /* this changes the color of the text */
+}
+
+
+.car_card{
+  color: var(--Transparent_white);
+  font-size: 13.8px;
+  line-height: 1.5rem;
+}
+
+.main_container{
+  display: flex;
+  max-width: 1440px;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  margin-top: 0%;
+  
+}
+
+.sedan_card{
+  background-color: var(--Bright_orange);
+  border-radius: 7px 0 0 7px;
+}
+
+.suv_card{
+  background-color: var(--Dark_cyan);
+}
+
+.luxury_card{
+  background-color: var(--Very_drk_cyan);
+  border-radius: 0 7px 7px 0;
+}
+
+h1{
+  font-family:'Big Shoulders Display', cursive;
+  /*font-family: 'Lexend Deca', sans-serif;*/
+  color:var(--Very_lt_gray);
+  margin-bottom: 20px;
+  padding-top: 20px;
+  margin-left: 20px;
+  font-size: 36px;
+}
+
+button{
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  padding: 14px;
+  width: 146px;
+  border-radius: 25px;
+  outline: none;
+  border: 2px solid var(--Very_lt_gray);
+  font-family: inherit;
+  transition: all 0.2s ease-in-out;
+  bottom: 42px;
+  margin: 40px;  
+  font-size: 18px;
+}
+
+p{
+  padding: 10px;
+  margin-bottom: 40px;
+
+}
+
+.sedan_card button{
+  background-color: var(--Very_lt_gray);
+  color: var(--Bright_orange);
+}
+.suv_card button{
+  background-color: var(--Very_lt_gray);
+  color: var(--Dark_cyan);
+}
+.luxury_card button{
+  background-color: var(--Very_lt_gray);
+  color: var(--Very_drk_cyan);
+}
+
+button:hover{
+  background-color: transparent;
+  color: var(--Very_lt_gray);
+  border: 1.5px;
+  border-style: solid;
+}
+
+.icon_box{
+  margin-top: 10px;
+  padding: 30px;
+}
+
+img{
+  margin-bottom: 36px;
+}
+
+
+@media only screen and (max-width:884px){
+  body{
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    flex-wrap: wrap;
+  }
+  .main_container{
+    margin: 500px 0;
+    flex-direction: column;  
+  }
+  .sedan_card{
+    border-radius: 7px 7px 0 0;
+  }
+  .luxury_card{
+    border-radius: 0 0 7px 7px;
+  }
+  p{
+    font-size: 0.77rem;
+  }
+}
